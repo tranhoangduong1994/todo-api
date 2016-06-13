@@ -66,10 +66,8 @@ app.post('/todos', function(req, res) {
 });
 
 // DELETE /todos/:id
-app.delete('/todo/:id', function(req, res) {
+app.delete('/todos/:id', function(req, res) {
     var todoId = parseInt(req.params.id, 10);
-    
-    system.log("preparing to delete " + todoId);
    
     db.todo.destroy({
         where: {
